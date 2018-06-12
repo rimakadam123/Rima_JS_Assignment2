@@ -5,6 +5,7 @@
 body {
 
   background-image: url("Tulips.jpg");
+  //background-color:green;
   background-repeat: no-repeat, repeat;
  background-size: 100%;
 
@@ -131,6 +132,24 @@ function DisplayDay() {
     document.getElementById("demo").innerHTML = "Today is " + day;
 }
 
+function DisplayColor_Body()
+{
+var d = new Date();
+var hr=d.getHours();
+
+if(hr >0 && hr <5){
+document.body.style.backgroundColor = "black";
+}
+else if(hr >5 && hr <11){
+document.body.style.backgroundColor = "yellow";
+}
+
+else if(hr >16 && hr <19){
+document.body.style.backgroundColor = "blue";
+}
+}
+
+
 </script>
 </head>
 
@@ -148,5 +167,6 @@ function DisplayDay() {
 <button type="button"onclick="DisplayColor_Body()">Question 10</button>
 </div>
 <p style="text-align:center" id="demo"></p>
+<p style="text-align:center" id="demo1"></p>
 </body>
 </html> 
