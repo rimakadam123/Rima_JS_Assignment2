@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+
+  background-image: url("Tulips.jpg");
+  background-repeat: no-repeat, repeat;
+ background-size: 100%;
+
+	}
+</style>
+
+<script>
+
+
+var n = 2; n *= 3 + 5; alert( n );
+
+var a = 1, b = 1; 
+var c = ++a; 
+var d = b++;
+
+
+function counter1(){
+var counter = 0;
+  counter++;
+    ++counter;	
+   alert ("counter value is first assigned to 0 then incremented to 1 later again incremented by 1");
+   alert(counter);
+
+}
+
+function counter2(){
+	alert ("First value of n is evaluated then multiplied by 3+5");
+   alert (n);
+}
+function counter3(){
+
+   alert (a);
+   alert (b);
+   alert (c);
+   alert (d);
+}
+
+function counter4(){
+var a = 2; var x = 1 + (a *= 2);
+   alert (a);
+   alert(x);
+}
+
+function Greatest()
+{
+var num1=10,num2=20,num3=30;
+if ( num1 > num2 && num1 > num3 )
+         alert("First number is largest.");
+      else if ( num2 > num1 && num2 > num3 )
+         alert("Second number is largest.");
+      else if ( num3 > num1 && num3 > num2 )
+        alert("Third number is largest.");
+      else   
+      alert("Number not in range");
+}
+
+function SwitchCase()
+{
+ var a=prompt("Entr number:");
+var text;
+   switch(a) {
+        case "0" :
+            alert("entered 0");
+        break;
+        case "1":
+        alert("entered 1");
+        break;
+        case "2":
+        alert("entered 2");
+        break;
+		case "3":
+        alert("entered 3");
+		break;
+        default:
+        text = "Invalid input";
+		console.log(text);
+		}
+
+}
+function CheckAge()
+{
+var age=15;
+if ( age >= 13 && age<=19 )
+         alert("Age falls in teenage category");
+		 
+      else
+         alert("Age does not fall in teenage category");     
+}
+function Ternary(){
+var result="Below",a=1,b=2;
+
+alert(a+b<4?"Below":"Over");
+}
+
+function DisplayDay() {
+    var day;
+    switch (new Date().getDay()) {
+        case 0:
+            day = "Sunday";
+			alert("It's a weekend");
+            break;
+        case 1:
+            day = "Monday";
+            break;
+        case 2:
+            day = "Tuesday";
+            break;
+        case 3:
+            day = "Wednesday";
+            break;
+        case 4:
+            day = "Thursday";
+            break;
+        case 5:
+            day = "Friday";
+            break;
+        case  6:
+            day = "Saturday";
+			alert("It's a weekend");
+            break;
+        default:
+            day = "Unknown Day";
+    }
+    document.getElementById("demo").innerHTML = "Today is " + day;
+}
+
+</script>
+</head>
+
+<body>
+<div align="center">
+<button type="button"onclick="counter1()">Question 1</button>
+<button type="button"onclick="counter2()">Question 2</button>
+<button type="button"onclick="counter3()">Question 3</button>
+<button type="button"onclick="counter4()">Question 4</button>
+<button type="button"onclick="Greatest()">Question 5</button>
+<button type="button"onclick="Ternary()">Question 6</button>
+<button type="button"onclick="SwitchCase()">Question 7</button>
+<button type="button"onclick="CheckAge()">Question 8</button>
+<button type="button"onclick="DisplayDay()">Question 9</button>
+<button type="button"onclick="DisplayColor_Body()">Question 10</button>
+</div>
+<p style="text-align:center" id="demo"></p>
+</body>
+</html> 
